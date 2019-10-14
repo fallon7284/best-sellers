@@ -6,7 +6,7 @@ export default ({setBook, books}) => {
         <div className="book-list">
             {books.map((b, i) => {
                 return (
-                    <BookThumb book={b} key={i} id={i} setBook={setBook} />
+                    <BookThumb className="thumb" book={b} key={i} id={i} setBook={setBook} />
                 )
             })}
         </div>

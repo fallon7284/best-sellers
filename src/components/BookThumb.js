@@ -6,16 +6,12 @@ export default ({book, setBook, id}) => {
     
     return (
         <div className="thumb" onClick={() => setBook(id)}>
-            
             <div className="thumb-head">
                 <div>
                     {title}
                 </div>
-                <div className="author">
-                    {author}
-                </div>
             </div>
-            
+            <hr/>
             <div className="thumb-body">
                 <div className="left">
                     <img 
@@ -25,8 +21,13 @@ export default ({book, setBook, id}) => {
                     ></img>
                 </div>
                 <div className="right">
+                <div className="author">
+                    {author}
+                </div>
                     {description}
-                    <a className="amazon" href={buy_links[2].url} alt='link to purchase on amazon.com'><FaAmazon/></a>
+                    <div className="thumb-links">
+                        <a className="amazon" href={buy_links[2].url} alt='link to purchase on amazon.com'><FaAmazon/></a>
+                    </div> 
                 </div>   
             </div>
         </div>

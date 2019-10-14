@@ -1,74 +1,105 @@
 .App {
   text-align: center;
-  border: 15px solid grey
+  /* position: absolute; */
 }
 
 .home{
   border: 15px solid brown;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center */
+}
+
+.header{
+  position: fixed;
+  height: 15%;
+  background-color: blue;
+  width: 100%;
 }
 
 .book-list{
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: right;
+  padding: 5%;
+  justify-content: space-around;
+  background-color: rgb(92, 33, 33); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vw;
   margin: 3%;
-  width: 100%
 }
+
+
 
 .home{
   /* display: flex; */
-  justify-content: center
+  justify-content: center;
+  height: 100%;
 }
 
 .thumb{
   border: 1px solid black;
-  background-color: #90909038;
-  width: 40%;
+  border-radius: 5px;
+  overflow: hidden;
   height: 300px;
-  margin-bottom: 5%;
-  margin-right: 5%;
-  margin-left: 5%;
+  object-fit: inherit;
+  display: flex;
+  flex-direction: column;
+  color: rgb(6, 8, 43);
+  background-color: rgb(243, 243, 217);
+  cursor: pointer;
+}
+
+.thumb:hover{
+  background-color: rgb(233, 233, 177);
 }
 
 
 .thumb-head{
   width: 100%;
-  height: 25%;
-  background-color: #909090;
-  color: white;
+  height: 14%;
+  /* background-color: lightgoldenrodyellow; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 20px;
   justify-content: space-between
 }
 
 .thumb-body{
-    display: flex;
-    flex-direction: row;
-    flex: 3;
-    height: 100%;
-    overflow-y: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2%;
+  height: 100%;
+  overflow-y: hidden;
+  padding: 3%
 }
 
 .thumb-body div{
-  width: 45%;
+  width: 100%;
   justify-content: space-between;
 }
 
-.thumb-body .left{
-  width: 50%;
-  height: 75%;
-  /* background-color: purple; */
+.thumb-links{
+  width: 100%;
+  justify-self: flex-end;
 }
 
-.thumb-body .right{
-  width: 50%;
-  height: 75%;
+hr{
+  width: 80%;
+  align-self: flex-end;
+}
+
+.left{
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.right{
+  /* width: 100%;
+  height: 100%;
+  padding-left: 10%; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .links{
@@ -76,36 +107,20 @@
   flex-direction: column;
 }
 
-.blurb{
-  color:#707070;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  /* width: 100%; */
-  background-color: green;
-}
-
 .amazon{
   font-size: 30px;
-  color: #909090;
+  color: darkgreen;
 }
 
 .author{
   font-style: italic;
-}
-
-.image-container{
-  border-right: 2px black;
-  width: 50%;
-  height: 248px;
-  align-items: left
+  font-size: 20px;
 }
 
 .thumb img{
   padding-right: 4%;
-  width: 65%;
-  /* position: relative */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* .thumb-right{
-  width: 100%
-} */

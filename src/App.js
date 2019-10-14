@@ -6,12 +6,16 @@ import Home from './components/Home'
 
 function App() {
   return (
-    <div className="App" style={{height: '100%'}}>
-    {/* <ScrollControl/> */}
-      <Router>
-        <Route exact path="/" component={Home}/>
-      </Router>
+    <div>
+      {/* <div className="header">THIS IS THE PAGE HEADER</div> */}
+      <div className="App" style={{height: '100%'}}>
+      {/* <ScrollControl/> */}
+        <Router>
+          <Route exact path="/" component={Home}/>
+        </Router>
+      </div>
     </div>
+    
   );
 }
 
